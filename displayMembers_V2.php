@@ -2,7 +2,7 @@
 include("dbcon.php");
 
 
-$sql = "SELECT id, firstname, lastname, phone, membership_type, price FROM aquaticCentre_v2";
+$sql = "SELECT id, firstname, lastname, phone, age FROM aquaticCentre_v2";
 
 
 $result = mysqli_query($conn, $sql);
@@ -13,8 +13,8 @@ if (mysqli_num_rows($result) > 0) {
         echo "ID: " . $row["id"] .
      " - Name: " . $row["firstname"] . " " . $row["lastname"] .
      " - Phone: " . $row["phone"] .
-     " - Membership Type: " . $row["membership_type"] .
-     " - Price: €" . $row["price"] . "<br>";
+     " - Age: " . $row["age"] . "<br>";
+     
     }    
 } else {
     echo "0 results to present ";
