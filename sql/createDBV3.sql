@@ -1,13 +1,11 @@
 CREATE DATABASE IF NOT EXISTS aquaticCentre;
 USE aquaticCentre;
 
-
 CREATE TABLE membership_types (
     id INT AUTO_INCREMENT PRIMARY KEY,
     type_name VARCHAR(50) NOT NULL,
     price DECIMAL(10,2) NOT NULL
 );
-
 INSERT INTO membership_types (type_name, price) VALUES
 ('Adult', 40.00),
 ('Child', 25.00),

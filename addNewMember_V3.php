@@ -45,7 +45,7 @@ $result = mysqli_query($conn, $sql);
     <select name="membership_type_id" required>
         <?php
             while ($row = mysqli_fetch_assoc($result)) {
-                echo "<option value='" . $row['id'] . "'>";   /// Added a dropdown s
+                echo "<option value='" . $row['id'] . "'>";   /// Added a dropdown section
                 echo $row['type_name'] . " (" . $row['price'] . " €)";
                 echo "</option>";
             }
