@@ -10,7 +10,7 @@ INSERT INTO membership_types (type_name, price) VALUES
 ('Adult', 40.00),
 ('Child', 25.00),
 ('Student', 30.00),
-('Senior', 20.00);
+('Senior', 35.00);
 
 CREATE TABLE aquaticCentre_v3 (
     id INT AUTO_INCREMENT PRIMARY KEY,

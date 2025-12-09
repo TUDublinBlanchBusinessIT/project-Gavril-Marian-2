@@ -55,6 +55,9 @@ $result = mysqli_query($conn, $sql);
     <br><br>
                                      
     <input type="submit" value="Submit">
+    <a href="displayMembers_V3.php">
+    <button type="button">View Members List</button>
+</a>
 
 </form>
 <?php
