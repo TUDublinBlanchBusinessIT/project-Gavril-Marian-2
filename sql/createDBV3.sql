@@ -19,5 +19,7 @@ CREATE TABLE aquaticCentre_v3 (
     phone VARCHAR(30),
     age INT,
     membership_type_id INT,
+    skill_level INT,
+    registration_date DATE,
     FOREIGN KEY (membership_type_id) REFERENCES membership_types(id)
 );
