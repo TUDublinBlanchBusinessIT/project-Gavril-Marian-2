@@ -13,7 +13,7 @@ $typeResult = mysqli_query($conn, $typeSql);
 
 <h2>Edit Member (Version 5)</h2>
 
-<form method="POST" action="updateMember_V5.php">
+<form method="POST" action="changedMembers_V5.php">
 
     <input type="hidden" name="id" value="<?= $member['id'] ?>">
 
@@ -58,6 +58,6 @@ $typeResult = mysqli_query($conn, $typeSql);
 </form>
 
 <br>
-<a href="displayMembers_V5.php"><button>Cancel</button></a>
+<a href="ChangedMembers_V5.php"><button>Cancel</button></a>
 
 <?php mysqli_close($conn); ?>
