@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+
+if (isset($_GET['msg'])) {
+    echo $_GET['msg'] . "<br><br>";
+}
+
 if (isset($_SESSION['username'])) {
     header("Location: displayMembers_V5.php");
     exit();

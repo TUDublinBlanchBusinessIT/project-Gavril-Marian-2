@@ -1,4 +1,23 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php?msg=Please log in first");
+    exit;
+}
+
+if (!isset($_SESSION['lastAccessed'])) {
+    $_SESSION['lastAccessed'] = time();
+}
+
+if ($_SESSION['lastAccessed'] < (time() - 60)) {
+    session_destroy();
+    echo "You were inactive for too long. Your session has ended.";
+    exit;
+}
+
+$_SESSION['lastAccessed'] = time();
+
 include("dbcon.php");
 
 $id = $_GET['id'];  
