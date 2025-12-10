@@ -75,3 +75,4 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <br><br>
 <a href="addNewMember_V4.php">Add New Member</a>
+<a href="logout.php"><button>Log out</button></a>
