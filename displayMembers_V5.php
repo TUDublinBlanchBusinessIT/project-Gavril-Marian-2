@@ -24,6 +24,7 @@ if ($_SESSION['lastAccessed'] < (time() - 60)) {
 
 
 include("dbcon.php");
+include("member.php");
 
 $sql = "
 SELECT 
@@ -44,7 +45,7 @@ JOIN membership_types
 $result = mysqli_query($conn, $sql);
 ?>
 
-<h2>Members List (Version 5)</h2>
+<h2>Members List (Version 5 + Class )</h2>
 
 <table border="1" cellpadding="6" cellspacing="0">
     <tr>
@@ -64,10 +65,12 @@ $result = mysqli_query($conn, $sql);
 <?php 
 
 while ($row = mysqli_fetch_assoc($result)) {
+    $member = new Member($row['firstname'], $row['lastname']);
+
 ?>
         <tr>
             <td><?= $row['id'] ?></td>
-            <td><?= $row['firstname'] . " " . $row['lastname'] ?></td>
+            <td><?= $member->getFullName() ?></td>
             <td><?= $row['phone'] ?></td>
             <td><?= $row['age'] ?></td>
             <td><?= $row['type_name'] ?></td>
