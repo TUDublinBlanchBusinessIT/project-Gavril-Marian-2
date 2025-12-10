@@ -2,7 +2,8 @@
 session_start();
 
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php?msg=Please log in first");
+    echo "<h3>You must log in to view this page.</h3>";
+    echo "<a href='login.php'>Go to Login</a>";
     exit;
 }
 

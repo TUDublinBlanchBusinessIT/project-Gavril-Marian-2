@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-
 if (isset($_GET['msg'])) {
-    echo $_GET['msg'] . "<br><br>";
+    echo "<h3>You must log in to access this page.</h3>";
 }
 
 if (isset($_SESSION['username'])) {
