@@ -8,7 +8,6 @@ if (isset($_SESSION['username'])) {
 ?>
 
 <h2>Login</h2>
-
 <form method="POST" action="loginCheck.php">
     Username:<br>
     <input type="text" name="username" required><br><br>
